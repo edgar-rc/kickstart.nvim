@@ -176,6 +176,16 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
+-- Netrw Expore
+vim.keymap.set('n', '<leader>ne', vim.cmd.Ex, { desc = 'Open [N]etrw [E]xplore on current file directory' })
+
+-- Cycle buffers
+vim.keymap.set('n', '<C-w>l', vim.cmd.bn, { desc = 'Next buffer' })
+vim.keymap.set('n', '<C-w>h', vim.cmd.bn, { desc = 'Previous buffer' })
+
+-- Delete current buffer
+vim.keymap.set('n', '<C-w>b', vim.cmd.bd, { desc = 'Delete current buffer' })
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
