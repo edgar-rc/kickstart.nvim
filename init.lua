@@ -348,6 +348,7 @@ require('lazy').setup({
         { '<leader>sn', group = '[S]earch [N]eovim Files' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>a', group = 'EC[A]' },
       },
     },
   },
