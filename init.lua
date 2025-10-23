@@ -186,6 +186,11 @@ vim.keymap.set('n', '<C-w>h', vim.cmd.bn, { desc = 'Previous buffer' })
 -- Delete current buffer
 vim.keymap.set('n', '<C-w>b', vim.cmd.bd, { desc = 'Delete current buffer' })
 
+-- Open terminal in new tab
+vim.keymap.set('n', '<leader>T', function()
+  vim.cmd 'tab terminal'
+end, { desc = 'Open [T]erminal in new tab' })
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
