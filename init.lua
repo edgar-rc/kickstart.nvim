@@ -706,6 +706,8 @@ require('lazy').setup({
             },
           },
         },
+
+        clojure_lsp = {},
       }
 
       -- Ensure the servers and tools above are installed
@@ -724,6 +726,8 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'clj-kondo', -- Clojure linter
+        'cljfmt', -- Clojure formatter
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -776,6 +780,7 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        clojure = { 'cljfmt' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
